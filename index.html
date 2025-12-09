@@ -1,110 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Micromega</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, sans-serif;
-      min-height: 100vh;
+      height: 100vh;
+      background: url('earthrise.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #ffffff;
-      overflow: hidden;
-    }
-
-    /* Full bright background image */
-    .background {
-      position: fixed;
-      inset: 0;
-      background-image: url("earthrise.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      z-index: -2;
-    }
-
-    /* Optional very light gradient for readability */
-    .soft-shadow {
-      position: fixed;
-      inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.1),
-        rgba(0, 0, 0, 0.4)
-      );
-      z-index: -1;
-      pointer-events: none;
-    }
-
-    /* Centered content */
-    .content {
       text-align: center;
-      padding: 2rem;
-      text-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Subtle dark overlay for readability */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(1px);
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+      max-width: 600px;
     }
 
     .logo {
-      width: 240px;
-      height: auto;
-      margin-bottom: 1.5rem;
+      width: 180px;
+      margin-bottom: 20px;
     }
 
-    h1 {
-      font-size: 2.5rem;
-      letter-spacing: 0.1em;
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    p {
-      font-size: 1.1rem;
+    .tagline {
+      font-size: 1.4rem;
+      font-weight: 300;
+      margin-bottom: 24px;
+      line-height: 1.4;
       opacity: 0.9;
-      margin-bottom: 0.75rem;
     }
 
-    a {
-      color: #ffffff;
+    a.email {
+      font-size: 1.1rem;
+      color: #a8d4ff;
       text-decoration: none;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-      padding-bottom: 2px;
-      font-weight: 600;
+      font-weight: 400;
     }
 
-    a:hover {
-      border-bottom-color: #ffffff;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.8rem;
-      }
-      .logo {
-        width: 180px;
-      }
+    a.email:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
-<body>
-  <div class="background"></div>
-  <div class="soft-shadow"></div>
 
-  <main class="content">
-    <img src="Logo_Horizontal_OnDark.png" alt="Micromega logo" class="logo" />
-    <h1>Micromega</h1>
-    <p>For more information</p>
-    <p><a href="mailto:info@micromega.io">info@micromega.io</a></p>
-  </main>
+<body>
+
+  <div class="content">
+    <img src="logo.png" class="logo" alt="Micromega Logo">
+    <div class="tagline">
+      Space based financial networking infrastructure
+    </div>
+    <a class="email" href="mailto:info@micromega.io">info@micromega.io</a>
+  </div>
+
 </body>
 </html>
-
