@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -28,7 +28,7 @@
     .hero-bg {
       position: fixed;
       inset: 0;
-      background: url("EARTHRISE-FILENAME.jpg") center center / cover no-repeat;
+      background: url("earthrise.jpg") center center / cover no-repeat;
       z-index: 0;
     }
 
@@ -36,7 +36,11 @@
     .overlay {
       position: fixed;
       inset: 0;
-      background: radial-gradient(circle at 30% 0%, rgba(15, 23, 42, 0.2), rgba(15, 23, 42, 0.85));
+      background: radial-gradient(
+        circle at 30% 0%,
+        rgba(15, 23, 42, 0.2),
+        rgba(15, 23, 42, 0.85)
+      );
       z-index: 1;
     }
 
@@ -45,11 +49,11 @@
       z-index: 2;
       padding: 2.5rem 2rem;
       max-width: 520px;
-      backdrop-filter: blur(4px);
+      backdrop-filter: blur(3px);
     }
 
     .logo {
-      width: 200px;              /* adjust if needed */
+      width: 240px;
       margin-bottom: 1.75rem;
     }
 
@@ -62,10 +66,9 @@
     }
 
     .email {
-      font-size: 1.05rem;
-      color: #bfdbfe;
+      font-size: 1.1rem;
+      color: #93c5fd;
       text-decoration: none;
-      font-weight: 400;
     }
 
     .email:hover {
@@ -73,19 +76,17 @@
     }
   </style>
 </head>
+
 <body>
 
-  <!-- Replace EARTHRISE-FILENAME.jpg with your actual background image file name,
-       or delete this div if you are using a different method -->
   <div class="hero-bg"></div>
   <div class="overlay"></div>
 
   <main class="content">
-    <!-- Replace micromega_logo.png with your actual logo file name -->
-    <img src="Logo_Horizontal_OnDark.png" alt="Micromega logo" class="logo" />
+    <img src="Logo_Horizontal_OnDark.png" alt="Micromega Logo" class="logo" />
 
     <div class="tagline">
-      Space based financial networking infrastructure
+      Space-based financial networking infrastructure
     </div>
 
     <a class="email" href="mailto:info@micromega.io">
